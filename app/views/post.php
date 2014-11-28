@@ -18,11 +18,13 @@
   <?php
 
    foreach ($post_list as $list){
-     echo '姓名:'.$list['name'].'<br>';
-     echo 'IP:'.$list['ip'].'<br>';
-     echo '留言:'.$list['content'].'<br>';
-     echo '<input type="button" onclick="location.href=\'http://hanbz.dlinkddns.com/demo/index.php/post_controller/del/'.$list['sn'].'\'" value="刪除此則留言"/><br><hr>';
-   }
+     echo '<table class="table table-bordered" style="background-color:#FFF0D4">';
+     echo '<tr><td class="col-md-1">姓名</td><td>'.$list['name'].'</td></tr>';
+     echo '<tr><td>IP</td><td>'.$list['ip'].'</td></tr>';
+     echo '<tr><td>日期</td><td>'.$list['date'].'</td></tr>';
+     echo '<tr><td>留言</td><td>'.$list['content'].'</td></tr></table>';
+     echo '<input type="button" class="btn btn-danger" onclick="location.href=\'http://hanbz.dlinkddns.com/demo/index.php/post_controller/del/'.$list['sn'].'\'" value="刪除此則留言"/><br><hr>';
+	}
 
   ?>
 

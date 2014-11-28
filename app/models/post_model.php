@@ -17,7 +17,7 @@ class Post_model extends CI_Model {
 
   public function get_list()
   {
-    $this->db->select('sn, name, content, ip');
+    $this->db->select('sn, name, content, ip, date');
     $query = $this->db->get('board');
     return $query->result_array();
   }
